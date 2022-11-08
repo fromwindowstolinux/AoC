@@ -37,32 +37,32 @@
 # - What is the position of the character that causes Santa to first enter
 # the basement?
 
+
+
 with open("1501_input.txt") as file:
 
     up = "("
     down = ")"
+
+    # Solution for Day 1 Part 1            
+    for parenthesis in file:
+        total_up = parenthesis.count(up)
+        total_down = parenthesis.count(down)
+        what_floor = total_up - total_down
+    print(what_floor)
+
     floor = 0
     floor_count = 0
-            
-    for item in file:
+    content = file.read()
 
-        # Solution for Day 1 Part 1:
+    # Unsolved Solution for Day 1 Part 2
 
-        total_up = item.count(up)
-        total_down = item.count(down)
-        what_floor = total_up - total_down
-
-        print(what_floor)
-
-        # Unsolved Solution for Day 1 Part 2
-            
-        floor_count += 1
-
-        if item == up:
+    for parenthesis in range(len(content)):
+        if parenthesis == up:
             floor += 1
-
-        elif item == down:
+        if parenthesis == down:
             floor -= 1
-
-        if floor == -1:
-            print(floor_count)
+        floor_count += 1
+    
+    if floor <= -1:
+        print(floor_count)
