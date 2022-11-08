@@ -53,7 +53,6 @@ def santa(answer_part_2 = False):
                 floor -= 1
             floor_count += 1
 
-<<<<<<< HEAD
             if answer_part_2:
                 if floor == -1:
                     print("Part 2 answer:", floor_count)
@@ -63,30 +62,3 @@ def santa(answer_part_2 = False):
     
 santa()
 santa(answer_part_2 = True)
-=======
-    up = "("
-    down = ")"
-
-    # Solution for Day 1 Part 1            
-    for bracket in file:
-        total_up = bracket.count(up)
-        total_down = bracket.count(down)
-        what_floor = total_up - total_down
-    print(what_floor)
-
-    floor = 0
-    floor_count = 0
-    content = file.read()
-
-    # Unsolved Solution for Day 1 Part 2
-
-    for bracket in content:
-        if bracket == up:
-            floor += 1
-        if bracket == down:
-            floor -= 1
-        floor_count += 1
-    
-        if floor == -1:
-            print(floor_count)
->>>>>>> b808aba7151fb2fee2088600134229db8bc0b4ac
