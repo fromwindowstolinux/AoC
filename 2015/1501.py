@@ -45,9 +45,9 @@ with open("1501_input.txt") as file:
     down = ")"
 
     # Solution for Day 1 Part 1            
-    for parenthesis in file:
-        total_up = parenthesis.count(up)
-        total_down = parenthesis.count(down)
+    for bracket in file:
+        total_up = bracket.count(up)
+        total_down = bracket.count(down)
         what_floor = total_up - total_down
     print(what_floor)
 
@@ -57,12 +57,12 @@ with open("1501_input.txt") as file:
 
     # Unsolved Solution for Day 1 Part 2
 
-    for parenthesis in range(len(content)):
-        if parenthesis == up:
+    for bracket in content:
+        if bracket == up:
             floor += 1
-        if parenthesis == down:
+        if bracket == down:
             floor -= 1
         floor_count += 1
     
-    if floor <= -1:
-        print(floor_count)
+        if floor == -1:
+            print(floor_count)
