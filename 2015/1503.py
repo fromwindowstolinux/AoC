@@ -42,7 +42,7 @@ def total():
         content = file.read()
         total_nd = delivery(content)
         
-        print(total_nd)
+        print("Answer for Part 1:", total_nd)
 
     # print("present delivered:", present_delivered)
     # return present_delivered
