@@ -27,6 +27,8 @@ with open("1506input.txt") as file:
                 else: # instruction = "toggle"
                     if (x, y) in light:
                         light[(x, y)] = not light[(x, y)]
+                    else:
+                        light[(x, y)] = True
 
 for key, value in light.items():
     if value:
