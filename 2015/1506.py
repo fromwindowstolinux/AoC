@@ -1,6 +1,8 @@
+part1 = 0
+lightp1 = {}
 
-counter = 0
-light = {}
+part2 = 0
+lightp2 = {}
 
 with open("1506input.txt") as file:
 
@@ -19,19 +21,46 @@ with open("1506input.txt") as file:
         y2 = int(words[5])
         
         for x in range(x1, x2+1):
-            for y in range(y1, y2+1):        
+
+            for y in range(y1, y2+1):  
+
                 if instruction == "on":
-                    light[(x, y)] = True
-                elif instruction == "off":
-                    light[(x, y)] = False
-                else: # instruction = "toggle"
-                    if (x, y) in light:
-                        light[(x, y)] = not light[(x, y)]
+                    lightp1[(x, y)] = True
+
+                    if (x, y) in lightp2:
+                        lightp2[(x, y)] += 1
+                    
                     else:
-                        light[(x, y)] = True
+                        lightp2[(x, y)] = 1
 
-for key, value in light.items():
+                elif instruction == "off":
+                    lightp1[(x, y)] = False
+
+                    if (x, y) in lightp2:
+
+                        if lightp2[(x, y)] > 0:
+                            lightp2[(x, y)] -= 1
+                        
+                        else: 0
+
+                else: # instruction = "toggle"
+
+                    if (x, y) in lightp1:
+                        lightp1[(x, y)] = not lightp1[(x, y)]
+                    
+                    if (x, y) in lightp2:
+                        lightp2[(x, y)] += 2
+
+                    else:
+                        lightp1[(x, y)] = True
+                        lightp2[(x, y)] = 2
+
+for key, value in lightp1.items():
     if value:
-        counter += 1
+        part1 += value
+print("Answer for Part 1:", part1)
 
-print(counter)
+for key, value in lightp2.items():
+    if value:
+        part2 += value
+print("Answer for Part 2:", part2)
