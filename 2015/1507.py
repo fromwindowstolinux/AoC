@@ -79,4 +79,13 @@ def result(signal):
 
     return res
 
-print(result("a"))
+print("Answer for Part 1:", result("a"))
+
+
+index["b"] = { 
+    "input": [result('a')], 
+    "operation": None, 
+    "output": "b" 
+    }
+result.cache_clear()
+print("Answer for Part 2:", result("a"))
