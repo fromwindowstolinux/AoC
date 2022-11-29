@@ -25,7 +25,7 @@ with open("1601input.txt") as file:
 
 for direction in directions:
 
-    if direction["turn"] == direction["turn"]:
+    if direction["turn"] == "R":
         count += direction["step"]
     else:
         count -= direction["step"]
