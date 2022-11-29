@@ -1,6 +1,7 @@
 x = 0
 y = 0
 orientation = 0
+visit_twice = [[0, 0]]
 
 with open("1601input.txt") as file:
 
@@ -19,7 +20,6 @@ with open("1601input.txt") as file:
                 orientation = (orientation - 1) % 4
 
             for _ in range(steps):
-
                 if orientation == 0:
                     y += 1
                 elif orientation == 1:
@@ -29,6 +29,13 @@ with open("1601input.txt") as file:
                 else:
                     x -= 1
 
-        p1 = abs(x) + abs(y)
+            p1 = abs(x) + abs(y)
+
+            if [x, y] in visit_twice:
+                p2 = abs(x) + abs(y)
+                
+            else:
+                visit_twice.append([x, y])
 
 print("Answer for Part 1:", p1)
+print("Answer for Part 2:", p2)
