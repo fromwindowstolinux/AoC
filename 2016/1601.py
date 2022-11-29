@@ -1,33 +1,34 @@
-from pprint import pprint
-
-directions = []
-count = 0
-
-# iterate, if diff add, same minus
+x = 0
+y = 0
+orientation = 0
 
 with open("1601input.txt") as file:
+
     for line in file:
-        # pprint(line)
         rep = line.replace(",","")
         str = rep.strip()
         instruction = str.split()
-        # pprint(instruction)
 
-    for item in instruction:
-        turn = item[0]
-        step = item[1:]
-        direction = {
-            "turn": turn,
-            "step": int(step)
-            }
-        directions.append(direction)
-        # pprint(directions)
+        for direction in instruction:
+            turn = direction[0]
+            steps = int(direction[1:])
 
-for direction in directions:
+            if turn == "R":
+                orientation = (orientation + 1) % 4
+            else:
+                orientation = (orientation - 1) % 4
 
-    if direction["turn"] == "R":
-        count += direction["step"]
-    else:
-        count -= direction["step"]
+            for _ in range(steps):
 
-print(count)
+                if orientation == 0:
+                    y += 1
+                elif orientation == 1:
+                    x += 1
+                elif orientation == 2:
+                    y -= 1
+                else:
+                    x -= 1
+
+        p1 = abs(x) + abs(y)
+
+print("Answer for Part 1:", p1)
