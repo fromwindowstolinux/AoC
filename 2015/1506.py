@@ -21,36 +21,24 @@ with open("1506input.txt") as file:
         y2 = int(words[5])
         
         for x in range(x1, x2+1):
-
             for y in range(y1, y2+1):  
-
                 if instruction == "on":
                     lightp1[(x, y)] = True
-
                     if (x, y) in lightp2:
                         lightp2[(x, y)] += 1
-                    
                     else:
                         lightp2[(x, y)] = 1
-
                 elif instruction == "off":
                     lightp1[(x, y)] = False
-
                     if (x, y) in lightp2:
-
                         if lightp2[(x, y)] > 0:
                             lightp2[(x, y)] -= 1
-                        
                         else: 0
-
                 else: # instruction = "toggle"
-
                     if (x, y) in lightp1:
                         lightp1[(x, y)] = not lightp1[(x, y)]
-                    
                     if (x, y) in lightp2:
                         lightp2[(x, y)] += 2
-
                     else:
                         lightp1[(x, y)] = True
                         lightp2[(x, y)] = 2
