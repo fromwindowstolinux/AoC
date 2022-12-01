@@ -14,7 +14,7 @@ with open("2201input.txt") as file:
         group.sort()
 
     part1 = group[-1]
-    part2 = group[-1] + group[-2] + group[-3] 
+    part2 = sum(group[-3:])
 
 print("Answer for Part 1:", part1)
 print("Answer for Part 2:", part2)
