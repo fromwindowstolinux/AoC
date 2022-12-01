@@ -8,7 +8,7 @@
 | Day 4 | [The Ideal Stocking Stuffer](https://github.com/fromwindowstolinux/AoC/blob/main/2015/1504.md) |
 | Day 5 | [Doesn't He Have Intern-Elves For This?](https://github.com/fromwindowstolinux/AoC/blob/main/2015/1505.md) |
 | Day 6 | [Probably a Fire Hazard](https://github.com/fromwindowstolinux/AoC/blob/main/2015/1506.md) |
-| Day 7 | [Some Assembly Required]() |
-| Day 8 | [Matchsticks]() |
-| Day 9 | [All in a Single Night]() |
-| Day 10 | [Elves Look, Elves Say]() |
+| Day 7 | [Some Assembly Required](https://github.com/fromwindowstolinux/AoC/blob/main/2015/1507.md) |
+| Day 8 | [Matchsticks](https://github.com/fromwindowstolinux/AoC/blob/main/2015/1508.md) |
+| Day 9 | [All in a Single Night](https://github.com/fromwindowstolinux/AoC/blob/main/2015/1509.md) |
+| Day 10 | [Elves Look, Elves Say](https://github.com/fromwindowstolinux/AoC/blob/main/2015/1510.md) |
