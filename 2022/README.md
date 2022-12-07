@@ -12,7 +12,7 @@ Collect stars by solving puzzles. Two puzzles will be made available on each day
 | :---: | :--- |
 | Day 1 | [Calorie Counting](https://github.com/fromwindowstolinux/AoC/blob/main/2022/2201.md) |
 | Day 2 | []() |
-| Day 3 | []() |
+| Day 3 | [Rucksack Reorganization](https://github.com/fromwindowstolinux/AoC/blob/main/2022/2203.md) |
 | Day 4 | []() |
 | Day 5 | []() |
 | Day 6 | []() |
