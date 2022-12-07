@@ -33,7 +33,6 @@ def p1(duel, shape, outcome):
     total = shape + outcome
     return total
 
-
 # PART 2
 def p2(duel, outcome, shape):
     # lose
@@ -66,7 +65,6 @@ def p2(duel, outcome, shape):
 
     total = outcome + shape
     return total
-
 
 if __name__ == "__main__":
     shape = 0
